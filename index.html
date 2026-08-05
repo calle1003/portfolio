@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -24,6 +24,7 @@
       <nav>
         <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
         <a href="https://github.com/calle1003" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
     </header>
@@ -53,7 +54,7 @@
         <article class="project-feature">
           <div class="project-meta">
             <span class="tag">Case Study</span>
-            <span class="year">2024–</span>
+            <span class="year">2025–</span>
           </div>
           <h3>
             <a href="projects/easel.html">演劇・公演向けチケット販売システム</a>
@@ -76,18 +77,92 @@
 
       <section id="about" class="section about">
         <div class="section-head">
+          <p class="section-kicker">Profile</p>
           <h2>About</h2>
         </div>
-        <p>
-          Web フロントエンドから API・DB・決済・デプロイまで一貫して扱います。
-          見た目だけでなく、運用・権限・障害切り分けまで含めてプロダクトを仕上げることを重視しています。
-        </p>
-        <p class="muted">
-          連絡先や追加実績は準備中です。GitHub:
-          <a href="https://github.com/calle1003" target="_blank" rel="noopener noreferrer"
-            >@calle1003</a
-          >
-        </p>
+
+        <div class="about-grid">
+          <div class="about-main">
+            <p class="about-lead">
+              Web フロントエンドから API・DB・決済・デプロイまで一貫して扱います。
+              見た目だけでなく、運用・権限・障害切り分けまで含めてプロダクトを仕上げることを重視しています。
+            </p>
+
+            <dl class="about-spec">
+              <div>
+                <dt>role</dt>
+                <dd>Full-stack Web Engineer</dd>
+              </div>
+              <div>
+                <dt>focus</dt>
+                <dd>本番運用・決済・在庫・管理画面</dd>
+              </div>
+              <div>
+                <dt>status</dt>
+                <dd><span class="status-dot" aria-hidden="true"></span>本番プロダクトを継続開発中</dd>
+              </div>
+              <div>
+                <dt>github</dt>
+                <dd>
+                  <a
+                    class="mono-link"
+                    href="https://github.com/calle1003"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >github.com/calle1003</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="about-aside" aria-label="Skills">
+            <p class="aside-label">stack / domain</p>
+            <ul class="stack about-stack">
+              <li>TypeScript</li>
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Prisma</li>
+              <li>MySQL</li>
+              <li>Stripe</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+              <li>Auth / RBAC</li>
+              <li>Ops</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-head">
+          <p class="section-kicker">Reach out</p>
+          <h2>Contact</h2>
+          <p>案件のご相談・ご質問はメールでお気軽にどうぞ。</p>
+        </div>
+
+        <dl class="about-spec contact-spec">
+          <div>
+            <dt>email</dt>
+            <dd>
+              <a class="mono-link" href="mailto:akimoto.takao9603@gmail.com"
+                >akimoto.takao9603@gmail.com</a
+              >
+            </dd>
+          </div>
+          <div>
+            <dt>github</dt>
+            <dd>
+              <a
+                class="mono-link"
+                href="https://github.com/calle1003"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github.com/calle1003</a
+              >
+            </dd>
+          </div>
+        </dl>
       </section>
     </main>
 
