@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>チケット販売システム — Takao Akimoto</title>
+    <meta
+      name="description"
+      content="演劇・公演向けチケット販売 Web アプリのケーススタディ。Next.js / Prisma / Stripe / Docker。"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="../">TA</a>
+      <nav>
+        <a href="../#work">Work</a>
+        <a href="../#about">About</a>
+        <a href="https://github.com/calle1003" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="case">
+      <p class="breadcrumb reveal">
+        <a href="../">Portfolio</a> / <span>Ticket Sales App</span>
+      </p>
+
+      <header class="case-hero reveal">
+        <p class="hero-kicker">Case Study</p>
+        <h1>演劇・公演向け<br />チケット販売システム</h1>
+        <p class="hero-lead">
+          公演情報の公開から購入・決済・当日チェックインまでを、ひとつの Web
+          アプリとして設計・実装しました。本番は別環境で運用中のため、こちらでは実装内容をまとめます。
+        </p>
+      </header>
+
+      <section class="case-block reveal">
+        <h2>Overview</h2>
+        <dl class="facts">
+          <div>
+            <dt>役割</dt>
+            <dd>設計・実装・デプロイ・運用改善</dd>
+          </div>
+          <div>
+            <dt>期間</dt>
+            <dd>2024年〜（継続）</dd>
+          </div>
+          <div>
+            <dt>種別</dt>
+            <dd>クライアント向けプロダクト（ソース非公開）</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="case-block reveal">
+        <h2>Stack</h2>
+        <ul class="stack">
+          <li>Next.js 15 (App Router)</li>
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>Prisma / MySQL 8</li>
+          <li>Stripe Checkout + Webhook</li>
+          <li>JWT 管理画面認証</li>
+          <li>Docker / GitHub Actions</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </section>
+
+      <section class="case-block reveal">
+        <h2>What I built</h2>
+        <ul class="bullets">
+          <li>公演・公演回ごとの在庫と販売ステータス管理</li>
+          <li>Stripe Checkout と Webhook による決済完了後のチケット発行</li>
+          <li>注文管理、座席割当、QR / 手入力チェックイン</li>
+          <li>権限付き管理画面と操作ログ</li>
+          <li>本番向け Docker イメージビルドと自動デプロイ</li>
+        </ul>
+      </section>
+
+      <section class="case-block reveal">
+        <h2>Design decisions</h2>
+        <div class="decision-list">
+          <article>
+            <h3>決済は Webhook で確定</h3>
+            <p>
+              ブラウザの戻りだけでは注文を確定せず、Stripe Webhook
+              を正としてチケット発行することで、途中離脱や二重送信に強い形にしています。
+            </p>
+          </article>
+          <article>
+            <h3>在庫は公演回単位</h3>
+            <p>
+              同公演でも回ごとに席種・残数・販売期間が異なる前提で、セッション単位の在庫モデルにしています。
+            </p>
+          </article>
+          <article>
+            <h3>本番と検証を分離</h3>
+            <p>
+              本番データ・本番決済キーはポートフォリオ用途に使いません。デモが必要な場合は別ホスト・架空データ・Stripe
+              テストモードで構成します。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-block reveal">
+        <h2>Note</h2>
+        <p class="note">
+          本番サイトの URL・実公演データ・顧客情報・ソースコードは公開していません。
+          許可範囲の説明と、今後追加予定の操作録画・デモ環境のみを掲載します。
+        </p>
+      </section>
+
+      <p class="case-back reveal">
+        <a class="text-link" href="../">← ポートフォリオへ戻る</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Takao Akimoto</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
