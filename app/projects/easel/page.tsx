@@ -32,14 +32,9 @@ export default function EaselCaseStudyPage() {
             アプリとして設計・実装しました。本番サイトとは分離したデモ環境で、購入フローや管理画面を試せます。
           </p>
           <div className="hero-actions">
-            <a
-              className="btn btn-primary"
-              href={EASEL.demoGuide}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className="btn btn-primary" href={EASEL.enterDemo}>
               デモを試す
-            </a>
+            </Link>
             <a
               className="btn btn-ghost"
               href={EASEL.official}
@@ -69,13 +64,8 @@ export default function EaselCaseStudyPage() {
             <div>
               <dt>デモ</dt>
               <dd>
-                <a
-                  href={EASEL.demoGuide}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  easel-demo-calle3.vercel.app
-                </a>
+                <Link href={EASEL.enterDemo}>easel-demo-calle3.vercel.app</Link>
+                <span className="muted"> （このページから入場）</span>
               </dd>
             </div>
             <div>
@@ -101,11 +91,9 @@ export default function EaselCaseStudyPage() {
               easel-since2024.com
             </a>
             ）とは完全に分離したポートフォリオ用デモです。表示データは架空で、Stripe
-            はテストモードのみ使用します。操作手順の詳細は
-            <a href={EASEL.demoGuide} target="_blank" rel="noopener noreferrer">
-              デモ案内ページ
-            </a>
-            にも記載しています。
+            はテストモードのみ使用します。操作手順の詳細はデモ案内ページにも記載しています。デモは
+            <strong>このケーススタディ経由でのみ</strong>
+            開けます。
           </p>
 
           <h3 className="case-subhead">試せる機能</h3>
@@ -223,9 +211,7 @@ export default function EaselCaseStudyPage() {
               easel-since2024.com
             </a>
             ／ デモ：
-            <a href={EASEL.demoGuide} target="_blank" rel="noopener noreferrer">
-              easel-demo-calle3.vercel.app/demo
-            </a>
+            <Link href={EASEL.enterDemo}>このページから入場</Link>
             。実公演データ・顧客情報・ソースコードは非公開です。
           </p>
         </section>

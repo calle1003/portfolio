@@ -62,14 +62,9 @@ export default function HomePage() {
               <Link className="text-link" href="/projects/easel">
                 ケーススタディを読む →
               </Link>
-              <a
-                className="text-link"
-                href={EASEL.demoGuide}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="text-link" href={EASEL.enterDemo}>
                 デモを試す →
-              </a>
+              </Link>
               <a
                 className="text-link"
                 href={EASEL.official}
