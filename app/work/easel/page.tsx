@@ -31,19 +31,6 @@ export default function EaselCaseStudyPage() {
             公演情報の公開から購入・決済・当日チェックインまでを、ひとつの Web
             アプリとして設計・実装しました。本番サイトとは分離したデモ環境で、購入フローや管理画面を試せます。
           </p>
-          <div className="hero-actions">
-            <Link className="btn btn-primary" href={EASEL.enterDemo}>
-              デモを試す
-            </Link>
-            <a
-              className="btn btn-ghost"
-              href={EASEL.official}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              公式サイト
-            </a>
-          </div>
         </header>
 
         <section className="case-block">
@@ -95,6 +82,11 @@ export default function EaselCaseStudyPage() {
             <strong>このケーススタディ経由でのみ</strong>
             開けます。
           </p>
+          <div className="hero-actions">
+            <Link className="btn btn-primary" href={EASEL.enterDemo}>
+              デモを試す
+            </Link>
+          </div>
 
           <h3 className="case-subhead">試せる機能</h3>
           <ul className="bullets">
