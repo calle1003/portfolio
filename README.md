@@ -28,9 +28,11 @@ npx vercel --prod
 
 ## 構成
 
-- `/` … トップ（Work / About / Contact）
-- `/projects/easel` … チケット販売システムのケーススタディ
-- `/projects/easel.html` … 旧 URL からリダイレクト
+- `/` … Home（Selected Work）
+- `/about` … About
+- `/contact` … Contact
+- `/work/easel` … チケット販売システムのケーススタディ
+- `/projects/easel` … 旧 URL から `/work/easel` へリダイレクト
 
 ## 関連リンク
 

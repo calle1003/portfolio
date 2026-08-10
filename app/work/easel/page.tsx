@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function EaselCaseStudyPage() {
   return (
     <>
-      <SiteHeader variant="case" />
+      <SiteHeader />
       <main className="case">
         <p className="breadcrumb reveal">
           <Link href="/">Portfolio</Link> / <span>Ticket Sales App</span>

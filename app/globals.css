@@ -196,6 +196,7 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.section-head h1,
 .section-head h2 {
   margin: 0;
   font-family: var(--font-display), sans-serif;

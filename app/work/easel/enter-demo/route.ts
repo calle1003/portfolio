@@ -10,8 +10,8 @@ function isCaseStudyReferer(request: NextRequest): boolean {
   try {
     const url = new URL(referer);
     if (url.origin !== request.nextUrl.origin) return false;
-    // /projects/easel 本体からのみ（enter-demo 自身や他ページは不可）
-    return url.pathname === "/projects/easel";
+    // /work/easel 本体からのみ（enter-demo 自身や他ページは不可）
+    return url.pathname === "/work/easel";
   } catch {
     return false;
   }
@@ -24,12 +24,12 @@ function createToken(secret: string): string {
 }
 
 /**
- * ケーススタディ（/projects/easel）からの Referer があるときだけ
+ * ケーススタディ（/work/easel）からの Referer があるときだけ
  * 短寿命トークン付きでデモへリダイレクトする。
  */
 export function GET(request: NextRequest) {
   if (!isCaseStudyReferer(request)) {
-    return NextResponse.redirect(new URL("/projects/easel", request.url), 302);
+    return NextResponse.redirect(new URL("/work/easel", request.url), 302);
   }
 
   const demoBase = (process.env.EASEL_DEMO_URL || DEFAULT_DEMO).replace(
