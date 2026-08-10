@@ -1,20 +1,42 @@
 # Takao Akimoto — Portfolio
 
-個人ポートフォリオサイトです。
+個人ポートフォリオサイト（Next.js / App Router）。
 
-## 公開手順（GitHub Pages）
+## 開発
 
-1. GitHub のリポジトリ `Settings` → `Pages`
-2. **Source**: `Deploy from a branch`
-3. **Branch**: `main` / `/ (root)`
-4. Save
+```bash
+npm install
+npm run dev
+```
 
-公開 URL 例:
+http://localhost:3000
 
-- `https://calle1003.github.io/portfolio/`
+## Vercel へのデプロイ
+
+1. [Vercel](https://vercel.com) で GitHub リポジトリ `calle1003/portfolio` を Import
+2. Framework Preset: **Next.js**（自動検出）
+3. 環境変数は不要
+4. Deploy
+
+CLI の場合:
+
+```bash
+npx vercel
+```
+
+本番向け:
+
+```bash
+npx vercel --prod
+```
 
 ## 構成
 
-- `index.html` … トップ
-- `projects/easel.html` … チケット販売システムのケーススタディ
-- `styles.css` / `script.js`
+- `/` … トップ（Work / About / Contact）
+- `/projects/easel` … チケット販売システムのケーススタディ
+- `/projects/easel.html` … 旧 URL からリダイレクト
+
+## 関連リンク
+
+- easel デモ: https://easel-demo-calle3.vercel.app/demo
+- easel 公式: https://easel-since2024.com
