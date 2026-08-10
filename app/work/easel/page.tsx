@@ -51,11 +51,11 @@ export default function EaselCaseStudyPage() {
           <dl className="facts">
             <div>
               <dt>役割</dt>
-              <dd>設計・実装・デプロイ・運用改善</dd>
+              <dd>要件定義・設計・実装・デプロイ・運用改善</dd>
             </div>
             <div>
               <dt>期間</dt>
-              <dd>2025年〜（継続）</dd>
+              <dd>2025年6月〜（継続）</dd>
             </div>
             <div>
               <dt>種別</dt>
@@ -99,16 +99,26 @@ export default function EaselCaseStudyPage() {
           <h3 className="case-subhead">試せる機能</h3>
           <ul className="bullets">
             <li>チケット購入フロー（Stripe テストカード）</li>
-            <li>管理画面（公演・注文・チェックインなど）</li>
+            <li>
+              管理画面（{EASEL.adminPath}：公演・注文・チェックインなど）
+            </li>
             <li>エントリーフォーム・お問い合わせ（送信はログのみ）</li>
             <li>ニュース・公演情報の閲覧</li>
           </ul>
 
           <h3 className="case-subhead">管理画面ログイン</h3>
           <p className="case-copy">
-            デモでは二段階認証（OTP）をスキップし、パスワードだけで入れます。
+            デモ入場後、下記 URL
+            から管理画面を開けます。デモでは二段階認証（OTP）をスキップし、パスワードだけで入れます。
           </p>
           <dl className="code-panel">
+            <div>
+              <dt>URL</dt>
+              <dd>
+                {EASEL.demo.replace(/\/$/, "")}
+                {EASEL.adminPath}
+              </dd>
+            </div>
             <div>
               <dt>Email</dt>
               <dd>{EASEL.adminEmail}</dd>

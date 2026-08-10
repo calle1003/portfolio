@@ -12,6 +12,8 @@ export const EASEL = {
   /** ケーススタディからのみデモへ入れる入口 */
   enterDemo: "/work/easel/enter-demo",
   official: "https://easel-since2024.com",
+  /** デモ入場後の管理画面パス */
+  adminPath: "/admin",
   adminEmail: "demo-admin@example.com",
   adminPassword: "demo-admin-123",
   stripeTestCard: "4242 4242 4242 4242",

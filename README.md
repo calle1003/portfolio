@@ -13,7 +13,7 @@ http://localhost:3000
 
 ## Vercel へのデプロイ
 
-本番 URL: https://portfolio-calle3.vercel.app
+本番 URL: https://takao-akimoto-portfolio.vercel.app
 
 1. [Vercel](https://vercel.com) で GitHub リポジトリ `calle1003/portfolio` を Import
 2. Framework Preset: **Next.js**（自動検出）
@@ -36,7 +36,7 @@ npx vercel --prod
 
 ## 関連リンク
 
-- ポートフォリオ（Vercel）: https://portfolio-calle3.vercel.app
+- ポートフォリオ（Vercel）: https://takao-akimoto-portfolio.vercel.app
 - easel デモ: https://easel-demo-calle3.vercel.app/demo
 - easel 公式: https://easel-since2024.com
 - 旧 GitHub Pages（参考）: https://calle1003.github.io/portfolio/
