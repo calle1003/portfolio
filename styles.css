@@ -502,6 +502,56 @@ main {
   color: var(--ink);
 }
 
+.case-hero .hero-actions {
+  margin-top: 1.5rem;
+}
+
+.case-copy {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.case-subhead {
+  margin: 1.5rem 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.code-panel {
+  margin: 0.75rem 0 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  background: var(--bg-elevated);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.code-panel div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem;
+}
+
+.code-panel div + div {
+  margin-top: 0.45rem;
+}
+
+.code-panel dt {
+  color: var(--muted);
+}
+
+.code-panel dd {
+  margin: 0;
+  word-break: break-all;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1rem;
+}
+
 .case-back {
   margin-top: 2.5rem;
 }
