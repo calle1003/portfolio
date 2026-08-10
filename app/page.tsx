@@ -62,7 +62,7 @@ export default function HomePage() {
               <Link className="text-link" href="/projects/easel">
                 ケーススタディを読む →
               </Link>
-              <Link className="text-link" href={EASEL.enterDemo}>
+              <Link className="text-link" href="/projects/easel">
                 デモを試す →
               </Link>
               <a
